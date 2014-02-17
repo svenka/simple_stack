@@ -2,17 +2,18 @@ package simplestack;
 
 public class Stack {
 
-int stack_mass[]=new int[10];
-int current_el;
+private int stack_mass[]=new int[10];
+private int current_el;
 
-Stack()
+Stack(int size)
 {
+	stack_mass=new int[size];
 current_el=-1;	
 	}
 
 void push(int item)
 {
-	if(item==9)
+	if(current_el==stack_mass.length-1)
 	{
 		System.out.println("Stack is full");
 	}
